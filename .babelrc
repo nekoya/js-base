@@ -1,0 +1,15 @@
+{
+    "presets": [
+    ],
+
+    "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-inline-environment-variables",
+        "transform-node-env-inline"
+    ],
+
+    "env": {
+        "development": {},
+        "production": {}
+    }
+}
