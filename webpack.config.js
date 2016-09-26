@@ -9,6 +9,12 @@ module.exports = {
     path: __dirname + '/dist',
     filename: 'bundle.js'
   },
+  resolve: {
+      alias: {},
+      root: [],
+      extensions: ['', '.js', '.jsx'],
+      modulesDirectories: ['node_modules'],
+  },
   module: {
     loaders: [
       {
