@@ -1,0 +1,8 @@
+# project specified
+dist
+
+# npm
+node_modules/
+
+# Mac OSX
+.DS_Store
