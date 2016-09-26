@@ -5,6 +5,8 @@
   "author": "nekoya <ryo.studiom@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "docker run -d -p 80:80 -v `pwd`:/usr/share/nginx/html --name webserver nginx",
+    "stop": "docker stop webserver && docker rm webserver",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
