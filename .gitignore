@@ -1,8 +1,9 @@
 # project specified
 dist
 
-# npm
+# modules
 node_modules/
+typings/
 
 # Mac OSX
 .DS_Store

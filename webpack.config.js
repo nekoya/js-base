@@ -4,7 +4,7 @@ const isRelease = process.env.NODE_ENV === 'production';
 
 module.exports = {
   context: __dirname + "/src",
-  entry: "./app.js",
+  entry: "./app.ts",
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js'
@@ -12,7 +12,7 @@ module.exports = {
   resolve: {
       alias: {},
       root: [],
-      extensions: ['', '.js', '.jsx'],
+      extensions: ['', '.js', '.jsx', '.ts', '.tsx'],
       modulesDirectories: ['node_modules'],
   },
   module: {
@@ -20,6 +20,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'babel-loader!ts-loader',
         exclude: /node_modules/,
       }
     ]
